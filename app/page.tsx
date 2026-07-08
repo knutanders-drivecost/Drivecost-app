@@ -1,17 +1,24 @@
-const costs = [
+const costItems = [
   ["Fuel / Energy", "$132", "17%"],
   ["Insurance", "$125", "16%"],
-  ["Service", "$95", "12%"],
+  ["Service & Maintenance", "$95", "12%"],
   ["Depreciation", "$241", "31%"],
   ["Loan / Finance", "$165", "21%"],
   ["Other Costs", "$26", "3%"]
 ];
 
 const features = [
-  ["Make smarter decisions", "Compare cars and ownership options before you buy."],
-  ["Track every cost", "Fuel, insurance, service, depreciation and financing in one place."],
-  ["Choose your currency", "Use USD, EUR, GBP, NOK, SEK, DKK and more."],
-  ["Plan ahead", "See the full picture of ownership costs over time."]
+  ["Track every cost", "Fuel, insurance, service, tires, depreciation and financing in one dashboard."],
+  ["Compare before you buy", "Understand which vehicle is smarter before you sign the deal."],
+  ["Global from day one", "USD, EUR, GBP, NOK, SEK and DKK support with miles or kilometers."],
+  ["DriveCost Score", "A simple ownership score that turns complex car costs into clear decisions."]
+];
+
+const compareRows = [
+  ["Monthly cost", "$784", "$921", "Model Y"],
+  ["Annual cost", "$9,408", "$11,052", "Model Y"],
+  ["Cost per mile", "$0.48", "$0.59", "Model Y"],
+  ["5-year cost", "$47,040", "$55,260", "Model Y"]
 ];
 
 export default function Home() {
@@ -21,118 +28,159 @@ export default function Home() {
         <div className="brand">DRIVE<span>COST</span></div>
         <div className="links">
           <a href="#features">Features</a>
-          <a href="#preview">Dashboard</a>
-          <a href="#auth">Sign in</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#compare">Compare</a>
+          <a href="#start">Start</a>
         </div>
-        <a className="navButton" href="#auth">Get Started</a>
+        <a className="navButton" href="#start">Get Started</a>
       </nav>
 
       <section className="hero">
         <div className="heroText">
-          <div className="eyebrow">Global vehicle ownership cost platform</div>
+          <div className="eyebrow">Premium vehicle ownership cost platform</div>
           <h1>Know the true cost of owning your car.</h1>
-          <p>Track every expense, compare vehicles, and understand the true cost of ownership — all in one place.</p>
+          <p>
+            Track every expense, compare vehicles, and understand the true cost of ownership — before and after you buy.
+          </p>
           <div className="buttons">
-            <a className="primary" href="#auth">Start Free</a>
-            <a className="secondary" href="#preview">See Demo</a>
+            <a className="primary" href="#start">Start Free</a>
+            <a className="secondary" href="#dashboard">View Dashboard</a>
+          </div>
+          <div className="trust">
+            <span>Built for private owners</span>
+            <span>Car buyers</span>
+            <span>Families</span>
           </div>
         </div>
 
-        <div className="dashboard" id="preview">
-          <div className="dashHeader">
+        <section className="productShell" id="dashboard">
+          <div className="dashboardTop">
             <div>
               <p>Monthly Ownership Cost</p>
               <h2>$784</h2>
+              <span>Estimated total ownership cost</span>
             </div>
             <button>USD ▾</button>
           </div>
 
-          <div className="chart"><div className="line"></div></div>
+          <div className="chartCard">
+            <div className="chartLine"></div>
+            <div className="dot"></div>
+          </div>
 
-          <div className="metrics">
+          <div className="metricGrid">
             <div><p>Annual Cost</p><strong>$9,408</strong></div>
             <div><p>Cost per mile</p><strong>$0.48</strong></div>
             <div><p>5-Year Cost</p><strong>$47,040</strong></div>
           </div>
 
-          <div className="breakdown">
-            <h3>Cost Breakdown</h3>
-            {costs.map(([name, amount, percent]) => (
-              <div className="row" key={name}>
-                <span>{name}</span>
-                <strong>{amount}</strong>
-                <em>{percent}</em>
-              </div>
-            ))}
+          <div className="split">
+            <div className="breakdown">
+              <h3>Cost Breakdown</h3>
+              {costItems.map(([name, amount, percent]) => (
+                <div className="costRow" key={name}>
+                  <span>{name}</span>
+                  <strong>{amount}</strong>
+                  <em>{percent}</em>
+                </div>
+              ))}
+            </div>
+            <div className="scoreCard">
+              <p>DriveCost Score</p>
+              <strong>82</strong>
+              <span>Smart ownership profile</span>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <section className="featureGrid" id="features">
         {features.map(([title, text]) => (
           <div className="feature" key={title}>
-            <div className="icon">▣</div>
+            <div className="icon">✦</div>
             <h3>{title}</h3>
             <p>{text}</p>
           </div>
         ))}
       </section>
 
-      <section className="authSection" id="auth">
-        <div className="authCopy">
-          <div className="eyebrow">Account preview</div>
-          <h2>Start with your first vehicle.</h2>
-          <p>Create a free DriveCost account and add your first car to calculate ownership cost, financing, fuel, insurance and depreciation.</p>
-          <div className="miniFlow">
-            <div><strong>1</strong><span>Create account</span></div>
-            <div><strong>2</strong><span>Add vehicle</span></div>
-            <div><strong>3</strong><span>See dashboard</span></div>
-          </div>
+      <section className="startSection" id="start">
+        <div className="startCopy">
+          <div className="eyebrow">Add your first vehicle</div>
+          <h2>Start with country, currency and vehicle details.</h2>
+          <p>
+            DriveCost is designed for global use. Choose your market, set your currency and add your vehicle by registration number, VIN or manually.
+          </p>
         </div>
 
-        <div className="authCard">
-          <h3>Welcome to DriveCost</h3>
-          <p>The smartest way to understand the true cost of owning a vehicle.</p>
+        <div className="vehicleCard">
+          <label>Country & currency</label>
+          <select>
+            <option>United States · USD · miles</option>
+            <option>Norway · NOK · km</option>
+            <option>United Kingdom · GBP · miles</option>
+            <option>European Union · EUR · km</option>
+            <option>Sweden · SEK · km</option>
+            <option>Denmark · DKK · km</option>
+          </select>
 
-          <button className="oauth">Continue with Google</button>
-          <button className="oauth">Continue with Apple</button>
+          <label>Vehicle</label>
+          <input placeholder="Registration number or VIN" />
 
-          <div className="divider"><span></span><em>or</em><span></span></div>
+          <label>Annual distance</label>
+          <input placeholder="12,000 miles / 20,000 km" />
 
-          <label>Email</label>
-          <input placeholder="you@example.com" />
-          <label>Password</label>
-          <input placeholder="••••••••" type="password" />
-
-          <button className="create">Create account</button>
-          <small>Already have an account? <a href="#">Sign in</a></small>
+          <button>Add Vehicle</button>
         </div>
       </section>
 
-      <section className="vehicleOnboarding">
-        <div className="vehicleCard">
+      <section className="compare" id="compare">
+        <div className="compareHead">
           <div>
-            <h2>Let's add your first vehicle.</h2>
-            <p>Choose country and currency, then add a registration number or enter vehicle details manually.</p>
+            <div className="eyebrow">Compare cars</div>
+            <h2>Find the smarter ownership decision.</h2>
           </div>
-          <div className="vehicleForm">
-            <select>
-              <option>United States · USD</option>
-              <option>Norway · NOK</option>
-              <option>United Kingdom · GBP</option>
-              <option>European Union · EUR</option>
-              <option>Sweden · SEK</option>
-              <option>Denmark · DKK</option>
-            </select>
-            <input placeholder="Registration number or VIN" />
-            <button>Add Vehicle</button>
+          <a href="#start">Start comparison →</a>
+        </div>
+
+        <div className="compareTable">
+          <div className="tableHead">
+            <span>Metric</span><span>Tesla Model Y</span><span>Volvo XC60</span><span>Winner</span>
           </div>
+          {compareRows.map(row => (
+            <div className="tableRow" key={row[0]}>
+              {row.map((cell, index) => <span className={index === 3 ? "winner" : ""} key={cell}>{cell}</span>)}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="authPreview">
+        <div className="authCopy">
+          <h2>Account system preview</h2>
+          <p>Next sprint: email login, Google login, Apple login and saved vehicles.</p>
+        </div>
+        <div className="authCard">
+          <h3>Welcome to DriveCost</h3>
+          <button>Continue with Google</button>
+          <button>Continue with Apple</button>
+          <input placeholder="Email address" />
+          <input placeholder="Password" type="password" />
+          <button className="mainButton">Create account</button>
         </div>
       </section>
 
       <footer>
-        <div className="brand">DRIVE<span>COST</span></div>
-        <p>© 2026 DriveCost. Know the true cost of owning your car.</p>
+        <div>
+          <div className="brand">DRIVE<span>COST</span></div>
+          <p>Know the true cost of owning your car.</p>
+        </div>
+        <div className="footerLinks">
+          <a>About</a>
+          <a>Pricing</a>
+          <a>Privacy</a>
+          <a>Contact</a>
+        </div>
       </footer>
     </main>
   );

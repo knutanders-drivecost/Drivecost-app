@@ -1,3 +1,3 @@
-# DriveCost Auth UI v1
+# DriveCost v0.2 Premium
 
-Global copy, currency preview, auth UI and add vehicle onboarding preview.
+Premium blue landing page with dashboard, add vehicle preview, compare preview and account preview.
