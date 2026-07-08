@@ -1,3 +1,3 @@
-# DriveCost v0.2 Premium
+# DriveCost Dashboard v1
 
-Premium blue landing page with dashboard, add vehicle preview, compare preview and account preview.
+Premium dashboard preview for DriveCost.
