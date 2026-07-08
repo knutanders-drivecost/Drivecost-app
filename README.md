@@ -1,3 +1,3 @@
-# DriveCost Landing Page v1
+# DriveCost Auth UI v1
 
-Premium blue landing page for DriveCost.
+Global copy, currency preview, auth UI and add vehicle onboarding preview.
