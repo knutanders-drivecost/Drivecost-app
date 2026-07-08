@@ -1,0 +1,1 @@
+export default function Home(){return <main><h1>DriveCost</h1><p>Foundation ready.</p></main>}
