@@ -1,3 +1,3 @@
-# DriveCost Dashboard v1
+# DriveCost Core v0.3
 
-Premium dashboard preview for DriveCost.
+Supabase-ready app structure with login, dashboard, garage, add vehicle and settings pages.

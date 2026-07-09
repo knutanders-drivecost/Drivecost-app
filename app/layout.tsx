@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DriveCost Dashboard",
-  description: "Premium vehicle ownership dashboard."
+  title: "DriveCost – Vehicle ownership dashboard",
+  description: "Track the true cost of owning your vehicle."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
