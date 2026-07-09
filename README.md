@@ -1,3 +1,3 @@
-# DriveCost Core v0.3
+# DriveCost Separated v1
 
-Supabase-ready app structure with login, dashboard, garage, add vehicle and settings pages.
+Public landing page at / and app dashboard at /app.
