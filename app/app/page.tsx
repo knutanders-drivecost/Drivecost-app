@@ -14,10 +14,9 @@ export default function AppPage() {
         <a className="brand" href="/">DRIVE<span>COST</span></a>
         <p>App workspace</p>
         <nav>
-          <a className="active">Dashboard</a>
-          <a>My Vehicles</a>
-          <a>Compare Cars</a>
-          <a>Calculator</a>
+          <a className="active" href="/app">Dashboard</a>
+          <a href="/add-vehicle">Add Vehicle</a>
+          <a href="/calculator">Calculator</a>
           <a>Reports</a>
           <a>Settings</a>
         </nav>
@@ -25,7 +24,7 @@ export default function AppPage() {
       <section className="mainContent">
         <header className="appHeader">
           <div><div className="pill">Dashboard</div><h1>Ownership Overview</h1></div>
-          <a className="primarySmall" href="/login">+ Add Vehicle</a>
+          <a className="primarySmall" href="/add-vehicle">+ Add Vehicle</a>
         </header>
         <section className="dashboardGrid">
           <div className="panel large">

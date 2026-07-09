@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DriveCost – Know the true cost of owning your car",
-  description: "DriveCost helps drivers understand and reduce vehicle ownership costs."
+  title: "DriveCost – True car ownership cost",
+  description: "Track, calculate and compare the true cost of owning your car."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

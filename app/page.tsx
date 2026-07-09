@@ -1,8 +1,8 @@
 const features = [
   ["True ownership cost", "Fuel, insurance, service, financing, depreciation and other costs in one place."],
-  ["Compare before you buy", "Compare vehicles side by side before making a financial decision."],
-  ["Global by default", "USD, EUR, GBP, NOK, SEK and DKK — with miles or kilometers."],
-  ["AI Cost Advisor", "Future AI insights to help reduce costs and improve ownership decisions."]
+  ["Ownership calculator", "Calculate monthly cost, annual cost and cost per mile before you buy."],
+  ["Compare vehicles", "See which car is financially smarter before making a decision."],
+  ["Global by default", "USD, EUR, GBP, NOK, SEK and DKK — with miles or kilometers."]
 ];
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <a className="brand" href="/">DRIVE<span>COST</span></a>
         <div className="navLinks">
           <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
+          <a href="/pricing">Pricing</a>
           <a href="/login">Sign In</a>
         </div>
         <a className="primarySmall" href="/login">Get Started</a>
@@ -52,26 +52,6 @@ export default function Home() {
             <p>{text}</p>
           </article>
         ))}
-      </section>
-
-      <section className="compareBlock">
-        <div>
-          <div className="pill">Buy smarter</div>
-          <h2>Compare cars before you commit.</h2>
-          <p>DriveCost turns car ownership into a clear financial decision — not a guess.</p>
-        </div>
-        <div className="miniTable">
-          <div><span>Metric</span><span>Model Y</span><span>XC60</span></div>
-          <div><span>Monthly</span><strong>$784</strong><strong>$921</strong></div>
-          <div><span>5-Year</span><strong>$47,040</strong><strong>$55,260</strong></div>
-          <div><span>Winner</span><strong className="blue">Model Y</strong><strong></strong></div>
-        </div>
-      </section>
-
-      <section className="pricingGrid" id="pricing">
-        <article className="priceCard"><h3>Free</h3><strong>$0</strong><p>1 vehicle and basic dashboard.</p><a href="/login">Start Free</a></article>
-        <article className="priceCard featured"><h3>Pro</h3><strong>$5/mo</strong><p>Unlimited vehicles, reports and comparison.</p><a href="/login">Start Pro</a></article>
-        <article className="priceCard"><h3>Fleet</h3><strong>Custom</strong><p>For families, companies and multi-car users.</p><a href="/login">Contact</a></article>
       </section>
 
       <section className="finalCta">

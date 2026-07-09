@@ -14,7 +14,7 @@ export default function LoginPage() {
           <button>Continue with Apple</button>
           <input placeholder="Email address" />
           <input placeholder="Password" type="password" />
-          <a className="primary full" href="/app">Create account</a>
+          <a className="primary full" href="/add-vehicle">Create account</a>
         </div>
       </section>
     </main>

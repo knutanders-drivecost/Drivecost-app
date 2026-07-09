@@ -1,3 +1,3 @@
-# DriveCost Separated v1
+# DriveCost App v0.4
 
-Public landing page at / and app dashboard at /app.
+Adds app routes for landing, dashboard, add vehicle, calculator, login and pricing.
