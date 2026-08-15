@@ -1,0 +1,5 @@
+node_modules
+.NeXT
+.env
+.env.local
+.vercel
